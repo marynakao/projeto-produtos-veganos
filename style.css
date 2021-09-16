@@ -12,6 +12,28 @@
 * {
     margin: 0;
     padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+.hamburguer {
+    /* background-color: rgb(252, 0, 0); */
+    width: 2em;
+    height: 2em;
+    position: fixed;
+    z-index: 100;
+    right: 2em;
+    top: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+.line {
+    width: 100%;
+    height: .2em;
+    background-color: var(--verde1);
 }
 
 header {
@@ -73,6 +95,7 @@ header {
 .banner button {
     background-color: var(--verde1);
     font-family: var(--roboto);
+    font-weight: 500;
     color: #fff;
     font-size: 1em;
     text-transform: uppercase;
@@ -87,3 +110,63 @@ header {
     transition: 0.4s;
 }
 
+.sidebar {
+    width: 20rem;
+    height: 100vh;
+    background-color: #e9e9e9;
+    position: fixed;
+    top: 0;
+    right: -20em;
+    transition: all 1s;
+}
+
+.show-menu.sidebar {
+    right: 0;
+}
+
+.menu {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+.menu-item {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.menu-link {
+    font-family: var(--roboto);
+    font-weight: 500;
+    font-size: 1.5em;
+    color: var(--verde1);
+}
+
+.menu-link:hover {
+    color: rgb(165, 204, 165);
+    transition: .2s;
+}
+
+.social-media {
+    position: absolute;
+    bottom: 2em;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.social-media i {
+    color: var(--cinza1);
+    height: 1.5em;
+    width: 2.5em;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-media i:hover {
+    color: rgb(156, 156, 156);
+    transition: .2s;
+}
